@@ -89,6 +89,34 @@ def intelligence_engine():
 
     print("\n✅ Analysis Complete.\n")
 
+    # ==============================
+    # LANGCHAIN STRATEGY INTEGRATION
+    # ==============================
+    
+    import sys
+    import os
+    
+    # Path to SNU Hacks directory
+    snu_hacks_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'SNU Hacks'))
+    if snu_hacks_path not in sys.path:
+        sys.path.append(snu_hacks_path)
+    
+    try:
+        from integration import run_langchain_analysis
+        print("\n🤖 GENERATING ENHANCED LANGCHAIN STRATEGY...\n")
+        
+        company_data = ["Smart Business Analyser"]
+        final_strategy = run_langchain_analysis(top_trend, top_issue, top_ad, company_data)
+        
+        print("\n========================================")
+        print("🌟 LANGCHAIN STRATEGY INSIGHTS 🌟")
+        print("========================================")
+        print(final_strategy)
+        print("========================================\n")
+        
+    except Exception as e:
+        print(f"\n❌ Failed to run LangChain integration: {e}\n")
+
 
 if __name__ == "__main__":
     intelligence_engine()

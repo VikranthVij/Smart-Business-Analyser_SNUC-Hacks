@@ -1,7 +1,8 @@
 import json
 import os
 
-FILE = "memory/user_profiles.json"
+base_dir = os.path.dirname(os.path.abspath(__file__))
+FILE = os.path.join(base_dir, "user_profiles.json")
 
 def load_profiles():
     if not os.path.exists(FILE):

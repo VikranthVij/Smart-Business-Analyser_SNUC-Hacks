@@ -7,8 +7,9 @@ class VectorStore:
     def __init__(self):
         self.model = SentenceTransformer('all-MiniLM-L6-v2')
 
-        self.index_path = "rag/faiss.index"
-        self.text_path = "rag/texts.pkl"
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+        self.index_path = os.path.join(base_dir, "faiss.index")
+        self.text_path = os.path.join(base_dir, "texts.pkl")
 
         # Load existing memory if available
         if os.path.exists(self.index_path) and os.path.exists(self.text_path):

@@ -41,11 +41,6 @@
     },
     {
         "brand": "Westside",
-        "name": "WARDROBE\n\nWardrobe Black Velvet A-Line Dress\n\n\u20b9 1,899.00",
-        "link": "https://www.westside.com/products/wardrobe-black-velvet-a-line-dress-301049877?variant=45032402255925"
-    },
-    {
-        "brand": "Westside",
         "name": "WARDROBE\n\nWardrobe Red Floral Top\n\n\u20b9 999.00",
         "link": "https://www.westside.com/products/wardrobe-red-floral-top-301055529?variant=44942195621941"
     },
@@ -118,5 +113,10 @@
         "brand": "Westside",
         "name": "STUDIOFIT\n\nStudiofit Plum Striped Cotton-Blend T-Shirt\n\n\u20b9 799.00",
         "link": "https://www.westside.com/products/studiofit-plum-striped-cotton-blend-t-shirt-301045144?variant=44763839758389"
+    },
+    {
+        "brand": "Westside",
+        "name": "STUDIOFIT\n\nStudiofit Rust Striped Cotton-Blend T-Shirt\n\n\u20b9 799.00",
+        "link": "https://www.westside.com/products/studiofit-rust-striped-cotton-blend-t-shirt-301041093?variant=44763841232949"
     }
 ]

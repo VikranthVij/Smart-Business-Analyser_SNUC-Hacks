@@ -6,7 +6,7 @@ from analysis.trend_detector import detect_trends
 from analysis.whitespace_detector import detect_whitespace
 import os
 
-os.environ["GROQ_API_KEY"] = "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"
+os.environ["GROQ_API_KEY"] = ""
 # SAMPLE SCRAPED DATA (simulate for now)
 company_data = [
     "AI powered productivity for enterprise teams",

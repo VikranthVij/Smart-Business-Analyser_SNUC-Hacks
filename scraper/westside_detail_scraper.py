@@ -36,12 +36,16 @@ def extract_keywords(name):
     keywords = []
 
     mapping = {
-        "oversized": ["oversized", "loose"],
+        "oversized": ["oversized", "loose", "baggy"],
         "graphic": ["graphic", "print", "printed", "logo"],
-        "plain": ["solid", "plain"],
+        "plain": ["solid", "plain", "basic"],
         "fit": ["slim", "regular", "relaxed"],
-        "material": ["cotton", "denim", "linen"],
-        "color": ["black", "white", "blue", "brown"],
+        "cotton": ["cotton"],
+        "denim": ["denim"],
+        "floral": ["floral"],
+        "striped": ["stripe", "striped"],
+        "polo": ["polo"],
+        "crewneck": ["crew", "crewneck"],
     }
 
     for key, words in mapping.items():

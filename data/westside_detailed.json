@@ -14,7 +14,9 @@
         "price": "\u20b9 1499",
         "category": "dress",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [],
+        "keywords": [
+            "floral"
+        ],
         "link": "https://www.westside.com/products/nuon-olive-floral-embellished-straight-dress-301053363?variant=44942454947893"
     },
     {
@@ -24,7 +26,7 @@
         "category": "other",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
         "keywords": [
-            "color"
+            "floral"
         ],
         "link": "https://www.westside.com/products/gia-black-floral-pattern-mid-rise-trousers-301046421?variant=44831191400501"
     },
@@ -34,9 +36,7 @@
         "price": "\u20b9 999",
         "category": "other",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "color"
-        ],
+        "keywords": [],
         "link": "https://www.westside.com/products/nuon-black-high-rise-faux-leather-shorts-301040747?variant=44833429585973"
     },
     {
@@ -46,7 +46,7 @@
         "category": "other",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
         "keywords": [
-            "color"
+            "floral"
         ],
         "link": "https://www.westside.com/products/nuon-white-floral-detailed-tube-top-301045042?variant=44835590045749"
     },
@@ -67,9 +67,7 @@
         "price": "\u20b9 999",
         "category": "other",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "color"
-        ],
+        "keywords": [],
         "link": "https://www.westside.com/products/nuon-brown-faux-leather-high-rise-skirt-301035230?variant=44797863755829"
     },
     {
@@ -97,8 +95,7 @@
         "category": "other",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
         "keywords": [
-            "material",
-            "color"
+            "cotton"
         ],
         "link": "https://www.westside.com/products/nuon-black-high-rise-cotton-blend-velvet-skirt-301043570?variant=44807896825909"
     },
@@ -108,32 +105,8 @@
         "price": "\u20b9 999",
         "category": "other",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "color"
-        ],
+        "keywords": [],
         "link": "https://www.westside.com/products/gia-brown-ribbed-high-rise-pants-301038168?variant=44694968303669"
-    },
-    {
-        "brand": "Westside",
-        "name": "LOV\n\nLOV Dark Brown Coat with Belt\n\n\u20b9 2,999.00",
-        "price": "\u20b9 2999",
-        "category": "other",
-        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "color"
-        ],
-        "link": "https://www.westside.com/products/lov-dark-brown-coat-with-belt-301032422?variant=44766879481909"
-    },
-    {
-        "brand": "Westside",
-        "name": "LOV\n\nLOV White Knit-Textured Top\n\n\u20b9 699.00 \u20b9 1,299.00",
-        "price": "\u20b9 699",
-        "category": "other",
-        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "color"
-        ],
-        "link": "https://www.westside.com/products/lov-white-knit-textured-top-301030713?variant=44668491038773"
     },
     {
         "brand": "Westside",
@@ -141,9 +114,7 @@
         "price": "\u20b9 1899",
         "category": "dress",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "color"
-        ],
+        "keywords": [],
         "link": "https://www.westside.com/products/wardrobe-black-velvet-a-line-dress-301049877?variant=45032402255925"
     },
     {
@@ -152,19 +123,8 @@
         "price": "\u20b9 1499",
         "category": "dress",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "color"
-        ],
-        "link": "https://www.westside.com/products/nuon-black-lace-detailed-a-line-dress-301056181?variant=45032413888565"
-    },
-    {
-        "brand": "Westside",
-        "name": "LOV\n\nLOV Cream Lace Detailed High-Rise Skirts\n\n\u20b9 1,699.00",
-        "price": "\u20b9 1699",
-        "category": "other",
-        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
         "keywords": [],
-        "link": "https://www.westside.com/products/lov-cream-lace-detailed-high-rise-skirts-301053184?variant=44960064602165"
+        "link": "https://www.westside.com/products/nuon-black-lace-detailed-a-line-dress-301056181?variant=45032413888565"
     },
     {
         "brand": "Westside",
@@ -172,19 +132,10 @@
         "price": "\u20b9 999",
         "category": "other",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [],
-        "link": "https://www.westside.com/products/wardrobe-red-floral-top-301055529?variant=44942195621941"
-    },
-    {
-        "brand": "Westside",
-        "name": "LOV\n\nLOV Black Sequin Embellished Velvet Tube Dress\n\n\u20b9 2,999.00",
-        "price": "\u20b9 2999",
-        "category": "dress",
-        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
         "keywords": [
-            "color"
+            "floral"
         ],
-        "link": "https://www.westside.com/products/lov-black-sequin-embellished-velvet-tube-dress-301044248?variant=44843392401461"
+        "link": "https://www.westside.com/products/wardrobe-red-floral-top-301055529?variant=44942195621941"
     },
     {
         "brand": "Westside",
@@ -192,9 +143,7 @@
         "price": "\u20b9 1499",
         "category": "other",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "color"
-        ],
+        "keywords": [],
         "link": "https://www.westside.com/products/wardrobe-black-layered-effect-blouse-301049449?variant=44857521700917"
     },
     {
@@ -204,20 +153,10 @@
         "category": "t-shirt",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
         "keywords": [
-            "material"
+            "cotton",
+            "striped"
         ],
         "link": "https://www.westside.com/products/studiofit-maroon-striped-cotton-blend-t-shirt-301045390?variant=44857237995573"
-    },
-    {
-        "brand": "Westside",
-        "name": "LOV\n\nLOV Blue High-Rise Flared Jeans\n\n\u20b9 1,499.00",
-        "price": "\u20b9 1499",
-        "category": "jeans",
-        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "color"
-        ],
-        "link": "https://www.westside.com/products/lov-blue-high-rise-flared-jeans-301050551?variant=44929534722101"
     },
     {
         "brand": "Westside",
@@ -226,22 +165,9 @@
         "category": "other",
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
         "keywords": [
-            "material"
+            "cotton"
         ],
         "link": "https://www.westside.com/products/nuon-dark-grey-ribbed-textured-cotton-blend-top-301046220?variant=44857491423285"
-    },
-    {
-        "brand": "Westside",
-        "name": "LOV\n\nLOV White Printed Cotton T-Shirt\n\n\u20b9 499.00",
-        "price": "\u20b9 499",
-        "category": "t-shirt",
-        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
-        "keywords": [
-            "graphic",
-            "material",
-            "color"
-        ],
-        "link": "https://www.westside.com/products/lov-white-printed-cotton-t-shirt-301046458?variant=44833425162293"
     },
     {
         "brand": "Westside",
@@ -251,9 +177,73 @@
         "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
         "keywords": [
             "graphic",
-            "material",
-            "color"
+            "cotton"
         ],
         "link": "https://www.westside.com/products/nuon-black-printed-cotton-t-shirt-301046728?variant=44857495453749"
+    },
+    {
+        "brand": "Westside",
+        "name": "WARDROBE\n\nWardrobe White Stripe Printed Bodycon Dress\n\n\u20b9 1,699.00",
+        "price": "\u20b9 1699",
+        "category": "dress",
+        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
+        "keywords": [
+            "graphic",
+            "striped"
+        ],
+        "link": "https://www.westside.com/products/wardrobe-white-stripe-printed-bodycon-dress-301051199?variant=44905335029813"
+    },
+    {
+        "brand": "Westside",
+        "name": "WARDROBE\n\nWardrobe Black Sweater\n\n\u20b9 1,299.00",
+        "price": "\u20b9 1299",
+        "category": "other",
+        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
+        "keywords": [],
+        "link": "https://www.westside.com/products/wardrobe-black-sweater-301050284?variant=44857519570997"
+    },
+    {
+        "brand": "Westside",
+        "name": "NUON\n\nNuon Blue Denim A-line Dress\n\n\u20b9 1,299.00",
+        "price": "\u20b9 1299",
+        "category": "dress",
+        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
+        "keywords": [
+            "denim"
+        ],
+        "link": "https://www.westside.com/products/nuon-blue-denim-a-line-dress-301045674?variant=44835591684149"
+    },
+    {
+        "brand": "Westside",
+        "name": "STUDIOFIT\n\nStudiofit Dark Grey Solid High-Rise Flared Pants\n\n\u20b9 1,299.00",
+        "price": "\u20b9 1299",
+        "category": "other",
+        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
+        "keywords": [
+            "plain"
+        ],
+        "link": "https://www.westside.com/products/studiofit-dark-grey-solid-high-rise-flared-pants-301045337?variant=44835586539573"
+    },
+    {
+        "brand": "Westside",
+        "name": "STUDIOFIT\n\nStudiofit Plum Text Design Cotton Sweatshirt\n\n\u20b9 999.00",
+        "price": "\u20b9 999",
+        "category": "shirt",
+        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
+        "keywords": [
+            "cotton"
+        ],
+        "link": "https://www.westside.com/products/studiofit-plum-text-design-cotton-sweatshirt-301045143?variant=44807899480117"
+    },
+    {
+        "brand": "Westside",
+        "name": "STUDIOFIT\n\nStudiofit Black Solid Hooded Jacket\n\n\u20b9 999.00",
+        "price": "\u20b9 999",
+        "category": "jacket",
+        "description": "Your wishlist has been temporarily saved. Please Log in to save it permanently.",
+        "keywords": [
+            "plain"
+        ],
+        "link": "https://www.westside.com/products/studiofit-black-solid-hooded-jacket-301044215?variant=44806111559733"
     }
 ]

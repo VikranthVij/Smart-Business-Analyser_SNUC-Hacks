@@ -1,45 +1,109 @@
-from playwright.sync_api import sync_playwright
 import json
 import os
+from collections import Counter
 
+INPUT_FILE = "data/westside_detailed.json"
 OUTPUT_FILE = "data/ads.json"
 
+# ==============================
+# FILTER CONFIG
+# ==============================
 
+# ❌ remove useless/generic signals
+IGNORE = ["color", "material", "other"]
+
+# ❌ remove category-only signals (not trends)
+REMOVE = ["t-shirt", "shirt", "dress", "jeans"]
+
+# ✅ high-value trend signals
+PRIORITY = [
+    "oversized", "graphic", "plain",
+    "fit", "cotton", "denim",
+    "floral", "striped", "polo",
+    "crewneck"
+]
+
+# 🔥 minimum frequency to be considered meaningful
+MIN_THRESHOLD = 2
+
+
+# ==============================
+# MAIN FUNCTION
+# ==============================
 def scrape_ads():
-    ads = []
 
-    with sync_playwright() as p:
-        browser = p.chromium.launch(headless=True)
-        page = browser.new_page()
+    with open(INPUT_FILE, "r") as f:
+        products = json.load(f)
 
-        page.goto("https://www.facebook.com/ads/library")
-        page.wait_for_timeout(5000)
+    all_signals = []
 
-        try:
-            page.fill("input", "Westside")
-            page.keyboard.press("Enter")
-            page.wait_for_timeout(5000)
-        except:
-            print("Search failed")
+    for p in products:
+        keywords = p.get("keywords", [])
+        category = p.get("category", "")
 
-        elements = page.query_selector_all("div")
+        # normalize keywords
+        keywords = [k.lower().strip() for k in keywords if k]
 
-        for el in elements[:50]:
-            try:
-                text = el.inner_text()
-                if len(text) > 50:
-                    ads.append({"ad_text": text})
-            except:
-                continue
+        # add keyword signals
+        for k in keywords:
+            if k not in IGNORE:
+                all_signals.append(k)
 
-        browser.close()
+        # add category (only if meaningful)
+        if category and category not in IGNORE:
+            all_signals.append(category.lower())
 
+    # ==============================
+    # COUNT SIGNALS
+    # ==============================
+    counts = Counter(all_signals)
+
+    # ==============================
+    # FILTER SIGNALS
+    # ==============================
+    filtered = {}
+
+    for k, v in counts.items():
+
+        # remove weak signals
+        if v < MIN_THRESHOLD:
+            continue
+
+        # remove generic categories
+        if k in REMOVE:
+            continue
+
+        # keep only priority or strong signals
+        if k in PRIORITY or v >= 3:
+            filtered[k] = v
+
+    # ==============================
+    # SORT
+    # ==============================
+    filtered = dict(
+        sorted(filtered.items(), key=lambda x: x[1], reverse=True)
+    )
+
+    # ==============================
+    # SAVE
+    # ==============================
     os.makedirs("data", exist_ok=True)
 
     with open(OUTPUT_FILE, "w") as f:
-        json.dump(ads, f, indent=4)
+        json.dump(filtered, f, indent=4)
 
-    print(f"✅ Collected {len(ads)} ads")
+    # ==============================
+    # OUTPUT
+    # ==============================
+    print("\n📢 FINAL AD SIGNALS:\n")
+
+    if not filtered:
+        print("No strong signals found")
+    else:
+        for k, v in filtered.items():
+            print(f"{k}: {v}")
+
+    return filtered
 
 
 if __name__ == "__main__":

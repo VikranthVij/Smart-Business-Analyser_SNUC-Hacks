@@ -1,30 +1,33 @@
 import json
-from collections import Counter
 
 INPUT_FILE = "data/ads.json"
 
 
 def ads_engine():
-    with open(INPUT_FILE, "r") as f:
-        ads = json.load(f)
 
-    keywords = []
+    try:
+        with open(INPUT_FILE, "r") as f:
+            data = json.load(f)
+    except FileNotFoundError:
+        print("❌ ads.json not found")
+        return {}
 
-    for ad in ads:
-        text = ad["ad_text"].lower().split()
+    print("\n📢 AD SIGNALS:\n")
 
-        for word in text:
-            if len(word) > 4:
-                keywords.append(word)
+    if not data:
+        print("No ad signals found")
+        return {}
 
-    keyword_count = Counter(keywords)
+    # sort signals
+    sorted_data = dict(
+        sorted(data.items(), key=lambda x: x[1], reverse=True)
+    )
 
-    print("\n📢 AD TRENDS:\n")
-
-    for k, v in keyword_count.most_common(10):
+    # print top signals
+    for k, v in list(sorted_data.items())[:10]:
         print(f"{k}: {v}")
 
-    return dict(keyword_count)
+    return sorted_data
 
 
 if __name__ == "__main__":

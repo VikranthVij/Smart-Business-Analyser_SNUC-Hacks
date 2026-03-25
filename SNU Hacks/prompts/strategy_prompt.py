@@ -9,7 +9,13 @@ STRICT RULES:
 - No vague language (no "maybe", "could", "it depends")
 - Use clear bullet points ONLY
 - Keep it concise and professional
+User Profile (personalized context):
+{profile}
 
+Personalization Rules:
+- Align strategy with user preferences
+- Respect user constraints
+- Adapt recommendations to user behavior
 Context:
 Trends: {trends}
 Overused: {overused}

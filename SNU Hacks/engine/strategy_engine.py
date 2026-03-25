@@ -1,6 +1,6 @@
 import os
 
-os.environ["GROQ_API_KEY"] = ""
+os.environ["GROQ_API_KEY"] = "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"
 
 
 
@@ -18,10 +18,12 @@ llm = ChatGroq(
 
 def generate_strategy(context, rules_output, tone):
     prompt = get_prompt()
-
+    rag_text = "\n".join(context.get("rag_context", []))
     chain = prompt | llm
 
     response = chain.invoke({
+        "profile": context["user_profile"],
+        "rag_context": rag_text,
         "trends": context["trends"],
         "overused": context["overused"],
         "whitespace": context["whitespace"],

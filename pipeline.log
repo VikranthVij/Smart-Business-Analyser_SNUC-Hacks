@@ -1,0 +1,91 @@
+Traceback (most recent call last):
+  File "/Users/devilphoenix/Vikranth/SNUC_Hacks/SmartBusinessAnalyser/scraper/westside_scraper.py", line 1, in <module>
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+Traceback (most recent call last):
+  File "/Users/devilphoenix/Vikranth/SNUC_Hacks/SmartBusinessAnalyser/scraper/westside_detail_scraper.py", line 1, in <module>
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+Traceback (most recent call last):
+  File "/Users/devilphoenix/Vikranth/SNUC_Hacks/SmartBusinessAnalyser/scraper/review_scraper.py", line 1, in <module>
+    from playwright.sync_api import sync_playwright
+ModuleNotFoundError: No module named 'playwright'
+
+📢 FINAL AD SIGNALS:
+
+cotton: 5
+floral: 4
+graphic: 3
+striped: 2
+plain: 2
+
+🔥 TREND DISTRIBUTION:
+
+high-rise: 6
+floral: 4
+mid-rise: 1
+black: 9
+faux: 2
+leather: 2
+white: 2
+printed: 3
+print: 3
+velvet: 3
+multicolour: 1
+brown: 2
+knit: 1
+textured: 2
+ribbed: 2
+denim: 1
+blue: 1
+
+📊 TREND SATURATION:
+
+high-rise: high
+floral: medium
+mid-rise: low
+black: high
+faux: low
+leather: low
+white: low
+printed: medium
+print: medium
+velvet: medium
+multicolour: low
+brown: low
+knit: low
+textured: low
+ribbed: low
+denim: low
+blue: low
+
+🚨 OPPORTUNITIES:
+
+Low competition trends: mid-rise, faux, leather, white, multicolour, brown, knit, textured, ribbed, denim, blue
+Highly saturated trends: high-rise, black
+
+🧠 FINAL INSIGHT:
+
+Opportunity detected in mid-rise category with low competition.
+Traceback (most recent call last):
+  File "/Users/devilphoenix/Vikranth/SNUC_Hacks/SmartBusinessAnalyser/backend/review_engine.py", line 2, in <module>
+    from sentence_transformers import SentenceTransformer
+ModuleNotFoundError: No module named 'sentence_transformers'
+
+📢 AD SIGNALS:
+
+cotton: 5
+floral: 4
+graphic: 3
+striped: 2
+plain: 2
+Traceback (most recent call last):
+  File "/Users/devilphoenix/Vikranth/SNUC_Hacks/SmartBusinessAnalyser/backend/intelligence_engine.py", line 2, in <module>
+    from review_engine import review_engine
+  File "/Users/devilphoenix/Vikranth/SNUC_Hacks/SmartBusinessAnalyser/backend/review_engine.py", line 2, in <module>
+    from sentence_transformers import SentenceTransformer
+ModuleNotFoundError: No module named 'sentence_transformers'
+🚀 Starting Full Pipeline...
+
+
+✅ Pipeline Completed

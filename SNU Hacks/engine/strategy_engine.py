@@ -1,6 +1,6 @@
 import os
 
-os.environ["GROQ_API_KEY"] = "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"
+os.environ["GROQ_API_KEY"] = ""
 
 
 

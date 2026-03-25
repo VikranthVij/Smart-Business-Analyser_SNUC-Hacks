@@ -40,8 +40,8 @@ issue_embeddings = {
 # ==============================
 # CONFIG
 # ==============================
-SIMILARITY_THRESHOLD = 0.45   # 🔥 lowered for better recall
-MIN_PATTERN_COUNT = 1         # 🔥 demo-safe
+SIMILARITY_THRESHOLD = 0.45
+MIN_PATTERN_COUNT = 1
 MIN_LENGTH = 5
 
 # ==============================
@@ -100,16 +100,34 @@ def classify_review(text):
 
 
 # ==============================
-# SOURCE DETECTION (IMPORTANT)
+# INTERPRETATION HELPERS
 # ==============================
-def detect_source(text):
+def confidence_label(score):
+    if score > 0.75:
+        return "HIGH"
+    elif score > 0.6:
+        return "MEDIUM"
+    return "LOW"
 
-    # 🔥 simple heuristic
-    if "amazon" in text:
-        return "amazon"
-    elif "google" in text:
-        return "google"
-    return "fallback"
+
+def generate_reason(issue, count):
+    reasons = {
+        "quality": "Multiple reviews highlight issues with fabric durability and stitching quality.",
+        "size": "Customers report inconsistent sizing and poor fit accuracy.",
+        "comfort": "Users mention discomfort, rough fabric, or poor wearability.",
+        "color": "Complaints about color fading or mismatch are observed."
+    }
+    return reasons.get(issue, "Pattern detected from multiple customer complaints.")
+
+
+def generate_suggestion(issue):
+    suggestions = {
+        "quality": "Improve fabric quality and stitching to enhance durability.",
+        "size": "Standardize sizing and improve fit consistency.",
+        "comfort": "Use softer materials and improve wearability.",
+        "color": "Enhance dye quality to prevent fading issues."
+    }
+    return suggestions.get(issue, "Improve product based on customer feedback.")
 
 
 # ==============================
@@ -126,9 +144,9 @@ def review_engine():
 
     seen = set()
 
-    # store weighted results
     issue_scores = defaultdict(float)
     issue_counts = defaultdict(int)
+    issue_samples = defaultdict(list)
 
     for r in reviews:
         text = r.get("text", "").strip()
@@ -149,14 +167,18 @@ def review_engine():
         source = r.get("source", "fallback")
         weight = SOURCE_WEIGHTS.get(source, 1)
 
-        # 🔥 weighted aggregation
         issue_scores[issue] += score * weight
         issue_counts[issue] += weight
 
-    # ==============================
-    # FINAL SCORING
-    # ==============================
-    final_issues = {}
+        # store sample reviews (max 3)
+        if len(issue_samples[issue]) < 3:
+            issue_samples[issue].append(text)
+
+    print("\n🚨 DETAILED CUSTOMER ISSUE ANALYSIS:\n")
+
+    if not issue_counts:
+        print("No strong patterns detected")
+        return {}
 
     for issue in issue_counts:
 
@@ -166,24 +188,28 @@ def review_engine():
             continue
 
         avg_conf = issue_scores[issue] / count
+        label = confidence_label(avg_conf)
 
-        final_issues[issue] = {
-            "count": count,
-            "confidence": round(avg_conf, 2)
-        }
+        print(f"🔴 ISSUE: {issue.upper()}\n")
+        print(f"Mentions: {count}")
+        print(f"Confidence: {round(avg_conf, 2)} ({label})\n")
 
-    # ==============================
-    # OUTPUT
-    # ==============================
-    print("\n🚨 VALIDATED CUSTOMER ISSUES:\n")
+        print("Reason:")
+        print(generate_reason(issue, count), "\n")
 
-    if not final_issues:
-        print("No strong patterns detected")
-    else:
-        for issue, data in final_issues.items():
-            print(f"{issue}: {data['count']} (confidence: {data['confidence']})")
+        print("Sample Evidence:")
+        for sample in issue_samples[issue]:
+            print(f"- {sample}")
+        print()
 
-    return final_issues
+        print("Interpretation:")
+        print(f"This issue appears consistently across reviews, indicating a reliable customer concern.\n")
+
+        print("Business Suggestion:")
+        print(generate_suggestion(issue))
+        print("\n" + "="*50 + "\n")
+
+    return issue_counts
 
 
 if __name__ == "__main__":

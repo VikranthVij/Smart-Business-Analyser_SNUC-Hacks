@@ -1,18 +1,8 @@
 [
     {
         "brand": "Westside",
-        "name": "NUON\n\nNuon Light Beige Self-Striped Puffer Jacket\n\n\u20b9 1,405.00",
-        "link": "https://www.westside.com/products/nuon-light-beige-self-striped-puffer-jacket-301026858?variant=44741908332597"
-    },
-    {
-        "brand": "Westside",
         "name": "WARDROBE\n\nWardrobe Navy Flared High-Rise Trousers\n\n\u20b9 1,405.00",
         "link": "https://www.westside.com/products/wardrobe-navy-flared-high-rise-trousers-301037790?variant=44728160518197"
-    },
-    {
-        "brand": "Westside",
-        "name": "NUON\n\nNuon Multicolor Striped Knit-Textured Cotton Top\n\n\u20b9 999.00",
-        "link": "https://www.westside.com/products/nuon-multicolor-striped-knit-textured-cotton-top-301054451?variant=45006045347893"
     },
     {
         "brand": "Westside",
@@ -36,11 +26,6 @@
     },
     {
         "brand": "Westside",
-        "name": "NUON\n\nNuon Olive Shimmer Detailed High-Rise Pants\n\n\u20b9 999.00 \u20b9 1,499.00",
-        "link": "https://www.westside.com/products/nuon-olive-shimmer-detailed-high-rise-pants-301045069?variant=44845758939189"
-    },
-    {
-        "brand": "Westside",
         "name": "NUON\n\nNuon Multicolour Printed Velvet Top\n\n\u20b9 499.00 \u20b9 999.00",
         "link": "https://www.westside.com/products/nuon-multicolour-printed-velvet-top-301042306?variant=44788586545205"
     },
@@ -58,11 +43,6 @@
         "brand": "Westside",
         "name": "GIA\n\nGia Teal Knit-Textured Sweater\n\n\u20b9 999.00 \u20b9 1,299.00",
         "link": "https://www.westside.com/products/gia-teal-knit-textured-sweater-301033466?variant=44799485607989"
-    },
-    {
-        "brand": "Westside",
-        "name": "NUON\n\nNuon Dark Brown Faux-Leather Jacket\n\n\u20b9 1,999.00",
-        "link": "https://www.westside.com/products/nuon-dark-brown-faux-leather-jacket-301053171?variant=44928813105205"
     },
     {
         "brand": "Westside",
@@ -86,37 +66,57 @@
     },
     {
         "brand": "Westside",
-        "name": "NUON\n\nNuon Light Blue Embellished Cotton-Blend Tank Top\n\n\u20b9 499.00",
-        "link": "https://www.westside.com/products/nuon-light-blue-embellished-cotton-blend-tank-top-301044886?variant=44741948014645"
+        "name": "WARDROBE\n\nWardrobe Black Velvet A-Line Dress\n\n\u20b9 1,899.00",
+        "link": "https://www.westside.com/products/wardrobe-black-velvet-a-line-dress-301049877?variant=45032402255925"
     },
     {
         "brand": "Westside",
-        "name": "LOV\n\nLOV Cream Floral Top\n\n\u20b9 1,299.00",
-        "link": "https://www.westside.com/products/lov-by-westside-cream-floral-top-301054613?variant=44942569734197"
+        "name": "NUON\n\nNuon Black Lace-Detailed A-Line Dress\n\n\u20b9 1,499.00",
+        "link": "https://www.westside.com/products/nuon-black-lace-detailed-a-line-dress-301056181?variant=45032413888565"
     },
     {
         "brand": "Westside",
-        "name": "BOMBAY PAISLEY\n\nBombay Paisley Dark Blue Embroidered Cotton Tiered Dress\n\n\u20b9 1,699.00",
-        "link": "https://www.westside.com/products/bombay-paisley-dark-blue-embroidered-cotton-tiered-dress-301045094?variant=44845754318901"
+        "name": "LOV\n\nLOV Cream Lace Detailed High-Rise Skirts\n\n\u20b9 1,699.00",
+        "link": "https://www.westside.com/products/lov-cream-lace-detailed-high-rise-skirts-301053184?variant=44960064602165"
     },
     {
         "brand": "Westside",
-        "name": "WARDROBE\n\nWardrobe Pink Floral Design High-Rise Trousers\n\n\u20b9 1,699.00",
-        "link": "https://www.westside.com/products/wardrobe-pink-floral-design-high-rise-trousers-301060751?variant=45035686789173"
+        "name": "WARDROBE\n\nWardrobe Red Floral Top\n\n\u20b9 999.00",
+        "link": "https://www.westside.com/products/wardrobe-red-floral-top-301055529?variant=44942195621941"
     },
     {
         "brand": "Westside",
-        "name": "LOV\n\nLOV Dark Brown Polka Dot Empire A-Line Dress\n\n\u20b9 1,999.00",
-        "link": "https://www.westside.com/products/lov-dark-brown-polka-dot-empire-a-line-dress-301046451?variant=44843398594613"
+        "name": "LOV\n\nLOV Black Sequin Embellished Velvet Tube Dress\n\n\u20b9 2,999.00",
+        "link": "https://www.westside.com/products/lov-black-sequin-embellished-velvet-tube-dress-301044248?variant=44843392401461"
     },
     {
         "brand": "Westside",
-        "name": "GIA\n\nGia Indigo High-Rise Cotton Pants\n\n\u20b9 1,699.00",
-        "link": "https://www.westside.com/products/gia-indigo-high-rise-cotton-pants-301051986?variant=44918855598133"
+        "name": "WARDROBE\n\nWardrobe Black Layered-Effect Blouse\n\n\u20b9 1,499.00",
+        "link": "https://www.westside.com/products/wardrobe-black-layered-effect-blouse-301049449?variant=44857521700917"
     },
     {
         "brand": "Westside",
-        "name": "NUON\n\nNuon Cream Printed Cotton T-Shirt\n\n\u20b9 499.00",
-        "link": "https://www.westside.com/products/nuon-cream-printed-cotton-t-shirt-301050078?variant=44919417536565"
+        "name": "STUDIOFIT\n\nStudiofit Maroon Striped Cotton-Blend T-Shirt\n\n\u20b9 799.00",
+        "link": "https://www.westside.com/products/studiofit-maroon-striped-cotton-blend-t-shirt-301045390?variant=44857237995573"
+    },
+    {
+        "brand": "Westside",
+        "name": "LOV\n\nLOV Blue High-Rise Flared Jeans\n\n\u20b9 1,499.00",
+        "link": "https://www.westside.com/products/lov-blue-high-rise-flared-jeans-301050551?variant=44929534722101"
+    },
+    {
+        "brand": "Westside",
+        "name": "NUON\n\nNuon Dark Grey Ribbed-Textured Cotton-Blend Top\n\n\u20b9 599.00",
+        "link": "https://www.westside.com/products/nuon-dark-grey-ribbed-textured-cotton-blend-top-301046220?variant=44857491423285"
+    },
+    {
+        "brand": "Westside",
+        "name": "LOV\n\nLOV White Printed Cotton T-Shirt\n\n\u20b9 499.00",
+        "link": "https://www.westside.com/products/lov-white-printed-cotton-t-shirt-301046458?variant=44833425162293"
+    },
+    {
+        "brand": "Westside",
+        "name": "NUON\n\nNuon Black Printed Cotton T-Shirt\n\n\u20b9 399.00",
+        "link": "https://www.westside.com/products/nuon-black-printed-cotton-t-shirt-301046728?variant=44857495453749"
     }
 ]

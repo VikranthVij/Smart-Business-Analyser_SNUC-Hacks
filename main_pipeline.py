@@ -1,6 +1,6 @@
 import os
 
-print("🚀 Running Full Pipeline...\n")
+print("🚀 Starting Full Pipeline...\n")
 
 # Scrapers
 os.system("python3 scraper/westside_scraper.py")
@@ -14,4 +14,4 @@ os.system("python3 backend/review_engine.py")
 os.system("python3 backend/ads_engine.py")
 os.system("python3 backend/intelligence_engine.py")
 
-print("\n✅ Pipeline completed.")
+print("\n✅ Pipeline Completed")

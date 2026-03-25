@@ -1,7 +1,7 @@
 import json
 from collections import Counter
 
-INPUT_FILE = "data/westside_detailed.json"
+INPUT_FILE = "data/westside_products.json"
 
 
 # ==============================

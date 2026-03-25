@@ -1,6 +1,7 @@
 from playwright.sync_api import sync_playwright
 import json
 import os
+import time
 
 URL = "https://www.westside.com/collections/men-t-shirts"
 
@@ -9,7 +10,6 @@ def clean_link(link):
     if not link:
         return None
 
-    # FIX malformed links
     if link.startswith("https//"):
         link = "https://" + link.split("https//")[1]
 
@@ -28,12 +28,24 @@ def scrape():
         page.goto(URL, timeout=60000)
 
         page.wait_for_load_state("domcontentloaded")
-        page.wait_for_timeout(4000)
 
-        # Scroll
-        for _ in range(5):
-            page.mouse.wheel(0, 4000)
+        # 🔥 STRONG SCROLL (LOAD MORE PRODUCTS)
+        prev_count = 0
+
+        for i in range(12):  # increased scroll depth
+            page.mouse.wheel(0, 6000)
             page.wait_for_timeout(2000)
+
+            products = page.query_selector_all("a[href*='/products/']")
+            curr_count = len(products)
+
+            print(f"Scroll {i+1}: Found {curr_count} products")
+
+            # stop if no new products loaded
+            if curr_count == prev_count:
+                break
+
+            prev_count = curr_count
 
         products = page.query_selector_all("a[href*='/products/']")
 
@@ -52,7 +64,8 @@ def scrape():
 
                 name = product.inner_text().strip()
 
-                if len(name) < 5:
+                # better filtering
+                if not name or len(name.split()) < 2:
                     continue
 
                 data.append({
@@ -71,7 +84,7 @@ def scrape():
         with open("data/westside_products.json", "w") as f:
             json.dump(data, f, indent=4)
 
-        print(f"✅ Scraped {len(data)} products")
+        print(f"\n✅ Scraped {len(data)} products")
 
 
 if __name__ == "__main__":

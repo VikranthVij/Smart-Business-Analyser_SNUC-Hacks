@@ -2,59 +2,74 @@ from playwright.sync_api import sync_playwright
 import json
 import os
 import time
+import re
 
 INPUT_FILE = "data/westside_products.json"
 OUTPUT_FILE = "data/westside_detailed.json"
 
 
+# ==============================
+# CATEGORY DETECTION (IMPROVED)
+# ==============================
 def infer_category(name):
     name = name.lower()
 
-    if "t-shirt" in name:
+    if "t-shirt" in name or "tee" in name:
         return "t-shirt"
     elif "shirt" in name:
         return "shirt"
     elif "jeans" in name:
         return "jeans"
+    elif "dress" in name:
+        return "dress"
+    elif "jacket" in name:
+        return "jacket"
     else:
         return "other"
 
 
+# ==============================
+# KEYWORD EXTRACTION (UPGRADED)
+# ==============================
 def extract_keywords(name):
     name = name.lower()
     keywords = []
 
-    if "oversized" in name:
-        keywords.append("oversized")
+    mapping = {
+        "oversized": ["oversized", "loose"],
+        "graphic": ["graphic", "print", "printed", "logo"],
+        "plain": ["solid", "plain"],
+        "fit": ["slim", "regular", "relaxed"],
+        "material": ["cotton", "denim", "linen"],
+        "color": ["black", "white", "blue", "brown"],
+    }
 
-    if any(x in name for x in ["graphic", "print", "logo"]):
-        keywords.append("graphic")
+    for key, words in mapping.items():
+        if any(w in name for w in words):
+            keywords.append(key)
 
     return keywords
 
 
+# ==============================
+# PRICE EXTRACTION (FIXED)
+# ==============================
 def extract_price(page):
     try:
-        page.wait_for_timeout(2000)
+        page.wait_for_timeout(3000)
+
+        texts = page.locator("text=₹").all()
 
         prices = []
 
-        elements = page.locator("text=₹").all()
-
-        for el in elements:
+        for t in texts:
             try:
-                text = el.inner_text().strip()
+                text = t.inner_text()
 
-                if "₹" in text:
-                    # clean text → remove ₹ and commas
-                    clean = text.replace("₹", "").replace(",", "").strip()
-
-                    # extract number
-                    import re
-                    match = re.search(r"\d+", clean)
-
-                    if match:
-                        prices.append(int(match.group()))
+                match = re.search(r"₹\s?([\d,]+)", text)
+                if match:
+                    price = int(match.group(1).replace(",", ""))
+                    prices.append(price)
 
             except:
                 continue
@@ -62,25 +77,26 @@ def extract_price(page):
         if not prices:
             return "N/A"
 
-        # 🔥 IMPORTANT LOGIC
-        # take MIN price (discounted price)
-        final_price = min(prices)
-
-        return f"₹ {final_price}"
+        return f"₹ {min(prices)}"
 
     except Exception as e:
         print("Price error:", e)
         return "N/A"
 
 
+# ==============================
+# DESCRIPTION EXTRACTION
+# ==============================
 def extract_description(page):
     try:
-        elements = page.locator("p").all()
+        page.wait_for_timeout(2000)
 
-        for el in elements:
-            text = el.inner_text().strip()
+        paragraphs = page.locator("p").all()
 
-            if len(text) > 40:
+        for p in paragraphs:
+            text = p.inner_text().strip()
+
+            if len(text) > 50:
                 return text
 
         return "N/A"
@@ -89,6 +105,9 @@ def extract_description(page):
         return "N/A"
 
 
+# ==============================
+# MAIN SCRAPER
+# ==============================
 def scrape_details():
     with open(INPUT_FILE, "r") as f:
         products = json.load(f)
@@ -106,7 +125,7 @@ def scrape_details():
                 page.goto(product["link"], timeout=60000)
 
                 page.wait_for_load_state("domcontentloaded")
-                page.wait_for_timeout(3000)
+                page.wait_for_timeout(4000)
 
                 price = extract_price(page)
                 description = extract_description(page)

@@ -114,6 +114,28 @@ def intelligence_engine():
         print(final_strategy)
         print("========================================\n")
         
+        # Save output to JSON for the frontend
+        import json
+        data_dir = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data'))
+        os.makedirs(data_dir, exist_ok=True)
+        out_file = os.path.join(data_dir, "latest_analysis.json")
+        
+        analysis_payload = {
+            "trend_distribution": trend_counts,
+            "top_trend": top_trend,
+            "top_trend_score": top_trend_score,
+            "top_issue": top_issue,
+            "top_issue_score": top_issue_score,
+            "ad_signals": ads_data if ads_data else {},
+            "top_ad": top_ad,
+            "top_ad_score": top_ad_score,
+            "langchain_strategy": final_strategy
+        }
+        
+        with open(out_file, "w") as f:
+            json.dump(analysis_payload, f, indent=4)
+        print(f"✅ Saved analysis output to {out_file}")
+
     except Exception as e:
         print(f"\n❌ Failed to run LangChain integration: {e}\n")
 

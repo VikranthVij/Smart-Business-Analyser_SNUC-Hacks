@@ -89,3 +89,82 @@ ModuleNotFoundError: No module named 'sentence_transformers'
 
 
 ✅ Pipeline Completed
+Opening Westside...
+Scroll 1: Found 25 products
+Scroll 2: Found 25 products
+
+✅ Scraped 24 products
+
+Processing 1/24
+Price: ₹ 999
+
+Processing 2/24
+Price: ₹ 999
+
+Processing 3/24
+Price: ₹ 699
+
+Processing 4/24
+Price: ₹ 499
+
+Processing 5/24
+Price: ₹ 999
+
+Processing 6/24
+Price: ₹ 999
+
+Processing 7/24
+Price: ₹ 699
+
+Processing 8/24
+Price: ₹ 999
+
+Processing 9/24
+Price: ₹ 999
+
+Processing 10/24
+Price: ₹ 1499
+
+Processing 11/24
+Price: ₹ 599
+
+Processing 12/24
+Price: ₹ 399
+
+Processing 13/24
+Price: ₹ 1699
+
+Processing 14/24
+Price: ₹ 1299
+
+Processing 15/24
+Price: ₹ 1299
+
+Processing 16/24
+Price: ₹ 999
+
+Processing 17/24
+Price: ₹ 999
+
+Processing 18/24
+Price: ₹ 599
+
+Processing 19/24
+Price: ₹ 799
+
+Processing 20/24
+Price: ₹ 999
+
+Processing 21/24
+Price: ₹ 1499
+
+Processing 22/24
+Price: ₹ 499
+
+Processing 23/24
+Price: ₹ 799
+
+Processing 24/24
+Price: ₹ 799
+
+✅ Detailed data saved (24 products)

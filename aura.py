@@ -140,3 +140,21 @@ def home():
 async def get_trends(request: KeywordRequest):
     results = process_keywords(request.keywords)
     return {"trends": results}
+
+@app.get("/analysis")
+def get_analysis():
+    data_file = os.path.join(os.path.dirname(__file__), "data", "latest_analysis.json")
+    if os.path.exists(data_file):
+        with open(data_file, "r") as f:
+            return json.load(f)
+    return {
+        "trend_distribution": {},
+        "top_trend": "No data fetched",
+        "top_trend_score": 0,
+        "top_issue": "No data fetched",
+        "top_issue_score": 0,
+        "ad_signals": {},
+        "top_ad": "No data fetched",
+        "top_ad_score": 0,
+        "langchain_strategy": "Run pipeline to generate strategy."
+    }
